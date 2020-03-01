@@ -14,7 +14,40 @@
     <title>Vegetable Juice</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <main>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <?php include("./banner.php"); ?>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <?php include("./navbar.php"); ?>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <?php include("./content.php"); ?>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <?php include("./footer.php"); ?>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
