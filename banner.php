@@ -1,1 +1,1 @@
-<img src="./img/vegetablejuice.png" alt="vegetablejuice" class="img-fluid">
+<img src="./img/vegetablejuice.png" alt="vegetablejuice" class="img-fluid w-100">
