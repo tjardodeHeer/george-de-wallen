@@ -15,5 +15,4 @@
       <img src="./img/kersen.jpg" alt="kersen" class="w-75 mx-auto d-block">
     </div>
   </div>
-
 </div>
