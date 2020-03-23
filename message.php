@@ -50,6 +50,18 @@
             </div>';
       header("Refresh: 3; ./index.php?content=register");
     break;
+    case "update-success" :
+      echo '<div class="alert alert-success mt-5 w-50 mx-auto" role="alert">
+              U bent succesvol geregistreerd, u wordt doorgestuurd naar de inlogpagina...
+            </div>';
+      header("Refresh: 3; ./index.php?content=login");
+    break;
+    case "update-error" :
+      echo '<div class="alert alert-danger mt-5 w-50 mx-auto" role="alert">
+              Het registratieproces is niet gelukt, kies een nieuw wachtwoord
+            </div>';
+            header("Refresh: 3; ./index.php?content=activate&id=$id&pwh=$pwh");
+    break;
     default:
       header("Location: ./index.php?content=home");
     break;
