@@ -49,8 +49,6 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
     </tr>
   </tbody>
 </table>
-
-<img class="  " width="42" height="30" src="http://www.am1x-vegetablejuice.org/img/icons/favicon.ico" style="height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0 none;"><table class="s-3 w-100" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
   <tbody>
     <tr>
       <td height="16" style="border-spacing: 0px; border-collapse: collapse; line-height: 16px; font-size: 16px; width: 100%; height: 16px; margin: 0;" align="left">
@@ -91,8 +89,11 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
       <table class="mx-auto" align="center" border="0" cellpadding="0" cellspacing="0" style="font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0px; border-collapse: collapse; margin: 0 auto;">
   <tbody>
     <tr>
+      <td style="border-spacing: 0px; border-collapse: collapse; line-height: 24px; font-size: 16px; margin: 0;" align="left">'. $d . ' - ' . $t .'</td>
+    </tr>
+    <tr>
       <td style="border-spacing: 0px; border-collapse: collapse; line-height: 24px; font-size: 16px; margin: 0;" align="left">
-        <img class="" width="100" height="100" src="http://www.am1x-vegetablejuice.org/img/perzik.jpg?w=100&amp;h=100&amp;dpr=2&amp;fit=crop&amp;mask=ellipse&amp;crop=faces&amp;faceindex=1&amp;fm=png" style="height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0 none;">
+        <img class="" width="120" height="100" src="http://www.am1x-vegetablejuice.org/img/perzik.jpg?w=100&amp;h=100&amp;dpr=2&amp;fit=crop&amp;mask=ellipse&amp;crop=faces&amp;faceindex=1&amp;fm=png" style="height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0 none;">
       </td>
     </tr>
   </tbody>
@@ -151,7 +152,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
   <tbody>
     <tr>
       <td style="border-spacing: 0px; border-collapse: collapse; line-height: 24px; font-size: 16px; margin: 0;" align="left">
-        <img width="50" height="50" class="" src="http://www.am1x-vegetablejuice.org/img/kersen.jpg?w=100&amp;h=100&amp;dpr=2&amp;fit=crop&amp;mask=ellipse&amp;crop=faces&amp;faceindex=1&amp;fm=png" style="height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0 none;">
+        <img width="100" height="100" class="" src="http://www.am1x-vegetablejuice.org/img/kersen.jpg?w=100&amp;h=100&amp;dpr=2&amp;fit=crop&amp;mask=ellipse&amp;crop=faces&amp;faceindex=1&amp;fm=png" style="height: auto; line-height: 100%; outline: none; text-decoration: none; border: 0 none;">
       </td>
     </tr>
   </tbody>
