@@ -89,7 +89,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
       <table class="mx-auto" align="center" border="0" cellpadding="0" cellspacing="0" style="font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0px; border-collapse: collapse; margin: 0 auto;">
   <tbody>
     <tr>
-      <td style="border-spacing: 0px; border-collapse: collapse; line-height: 24px; font-size: 16px; margin: 0;" align="left">'. $d . ' - ' . $t .'</td>
+      <td style="border-spacing: 0px; border-collapse: collapse; line-height: 24px; font-size: 16px; margin: 0;" align="left">'. $array["date"] . ' - ' . $array["time"] .'</td>
     </tr>
     <tr>
       <td style="border-spacing: 0px; border-collapse: collapse; line-height: 24px; font-size: 16px; margin: 0;" align="left">
@@ -101,7 +101,7 @@ $message = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www
 
       <h4 class="text-center" style="margin-top: 0; margin-bottom: 0; font-weight: 500; color: inherit; vertical-align: baseline; font-size: 24px; line-height: 28.8px;" align="center">Klik op de onderstaande link om te registreren!</h4>
       <h5 class="text-muted text-center" style="margin-top: 0; margin-bottom: 0; font-weight: 500; color: #636c72; vertical-align: baseline; font-size: 20px; line-height: 24px;" align="center">
-      <a href="http://www.am1x-vegetablejuice.org/index.php?content=activate&id=' . $id . '&pwh=' . $password_hash .'">vegetablejuice-register</a></h5>
+      <a href="http://www.am1x-vegetablejuice.org/index.php?content=activate&id=' . $id . '&pwh=' . $array['password_hash'] .'">vegetablejuice-register</a></h5>
 
       <div class="hr " style="width: 100%; margin: 20px 0; border: 0;">
   <table border="0" cellpadding="0" cellspacing="0" style="font-family: Helvetica, Arial, sans-serif; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-spacing: 0px; border-collapse: collapse; width: 100%;">
