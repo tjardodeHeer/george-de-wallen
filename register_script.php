@@ -26,7 +26,6 @@
                                       '$email',
                                       '{$array["password_hash"]}',
                                       'customer')";
-
       // echo $sql;exit();
       if (mysqli_query($conn, $sql)) {
 
