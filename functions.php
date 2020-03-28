@@ -4,11 +4,9 @@
     $data = htmlspecialchars($raw_data);
     $data = mysqli_real_escape_string($conn, $data);
     return $data;
- }
+  }
 
-
-  function date_password_hash() {
-
+  function mk_password_hash_from_microtime() {
     $mut = microtime();
 
     $time = explode(" ", $mut);
@@ -18,11 +16,13 @@
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
     $onehour = mktime(1,0 ,0, 1, 1, 1970);
- 
-    $d = date("d-m-Y", ($time[1] + $onehour));
 
-    $t = date("H:i:s", ($time[1] + $onehour));
+    $date_formated = date("d-m-Y", ($time[1] + $onehour));
 
-    return array("time" => $t, "date" => $d, "password_hash" => $password_hash);
+    $time_formated = date("H:i:s", ($time[1] + $onehour));
+
+    return array("password_hash" => $password_hash,
+                 "date"          => $date_formated,
+                 "time"          => $time_formated);
   }
 ?>

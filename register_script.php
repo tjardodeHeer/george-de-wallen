@@ -14,10 +14,11 @@
     if (mysqli_num_rows($result)) {
       header("Location: ./index.php?content=message&alert=emailexists");
     } else {
-
-      $array = date_password_hash();
-      //  var_dump($array); exit();
-            
+      // De functie mk_password_hash_from_microtime() maakt een password hash,
+      // haalt de tijd en datum op op basis van de php-functie microtime() 
+      // en geeft dit terug in $array
+      $array = mk_password_hash_from_microtime();      
+      
       $sql = "INSERT INTO `register` (`id`,
                                       `email`,
                                       `password`,
