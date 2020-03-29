@@ -22,11 +22,13 @@
       $sql = "INSERT INTO `register` (`id`,
                                       `email`,
                                       `password`,
-                                      `userrole`)
+                                      `userrole`,
+                                      `activated`)
               VALUES                 (NULL,
                                       '$email',
                                       '{$array["password_hash"]}',
-                                      'customer')";
+                                      'customer',
+                                      0)";
       // echo $sql;exit();
       if (mysqli_query($conn, $sql)) {
 
