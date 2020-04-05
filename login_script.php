@@ -7,10 +7,30 @@
   $password = sanitize($_POST["password"]);
 
   if (empty($email) || empty($password)) {
-    echo "Leeg";
+    // Check of de loginformvelden zijn ingevuld...
+    header("Location: ./index.php?content=message&alert=loginform-empty");
   } else {
-    echo "Ingevuld";
-  }
-?>
+      
+                            $sql = "SELECT * FROM `register` WHERE `email` = '$email'";
 
-<!-- Volgende stap is dat we gaan kijken of het ingevulde emailadres wel bestaat? -->
+                            $result = mysqli_query($conn, $sql);
+
+                            // var_dump((bool) mysqli_num_rows($result));
+
+                            if (!mysqli_num_rows($result)) {
+                              // E-mailadres onbekend...
+                              header("Location: ./index.php?content=message&alert=email-unknown");
+                            } else {
+
+                              $record = mysqli_fetch_assoc($result);
+
+                              // var_dump((bool) $record["activated"]);
+
+                              if (!$record["activated"]) {
+                                header("Location: ./index.php?content=message&alert=not-activated&email=$email");                                
+                              }
+                            }
+
+    
+  } // Check of de loginformvelden zijn ingevuld...
+?>
