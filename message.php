@@ -89,7 +89,13 @@
     break;
     case "not-activated" :
       echo '<div class="alert alert-danger mt-5 w-50 mx-auto text-center" role="alert">
-              Uw account is nog niet geactiveerd. Check uw e-mail <span class="badge badge-primary">' . $email . '</span> voor het klikken op de activatielink....
+              Uw account is nog niet geactiveerd. Check uw e-mail <span class="badge badge-danger p-2">' . $email . '</span> voor het klikken op de activatielink....
+            </div>';
+            header("Refresh: 3; ./index.php?content=login");
+    break;
+    case "no-pw-match" :
+      echo '<div class="alert alert-danger mt-5 w-50 mx-auto text-center" role="alert">
+              Uw ingevulde wachtwoord voor het e-mailadres <span class="badge badge-danger p-2">' . $email . '</span> is niet correct, probeer het opnieuw....
             </div>';
             header("Refresh: 3; ./index.php?content=login");
     break;
