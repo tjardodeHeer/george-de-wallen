@@ -34,6 +34,9 @@ if (empty($email) || empty($password)) {
       header("Location: ./index.php?content=message&alert=no-pw-match&email=$email");
     } else {
       // password matched
+     
+      $_SESSION["id"] = $record["id"];
+      $_SESSION["userrole"] = $record["userrole"];
 
       switch ($record["userrole"]) {
         case 'customer':
