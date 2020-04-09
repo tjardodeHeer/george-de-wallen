@@ -29,12 +29,20 @@ $active = (isset($_GET["content"])) ? $_GET["content"] : "";
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item <?php echo ($active == "register")? "active" : "" ?>">
-        <a class="nav-link" href="./index.php?content=register">registreer</a>
-      </li>
-      <li class="nav-item <?php echo ($active == "login") ? "active" : "" ?>">
-        <a class="nav-link" href="./index.php?content=login">inloggen</a>
-      </li>
+      <?php 
+        if (isset($_SESSION["id"])) {
+          echo '<li class="nav-item '; echo ($active == "logout") ? "active" : ""; echo '">
+                  <a class="nav-link" href="./index.php?content=logout">uitloggen</a>
+                </li>';
+        } else {
+          echo '<li class="nav-item '; echo ($active == "register")? "active" : ""; echo '">
+                  <a class="nav-link" href="./index.php?content=register">registreer</a>
+                </li>
+                <li class="nav-item '; echo ($active == "login") ? "active" : ""; echo '">
+                  <a class="nav-link" href="./index.php?content=login">inloggen</a>
+                </li>';
+        }
+      ?>    
     </ul>
   </div>
 </nav>
