@@ -4,7 +4,7 @@
       <form action="./index.php?content=register_script" method="post">
         <div class="form-group">
           <label for="inputEmail">Vul hier uw e-mailadres in:</label>
-          <input name="email" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+          <input name="email" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" autofocus>
           <small id="emailHelp" class="form-text text-muted">Uw privacy is gegarandeerd...</small>
         </div>
         

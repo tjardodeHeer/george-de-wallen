@@ -8,9 +8,42 @@ $active = (isset($_GET["content"])) ? $_GET["content"] : "";
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item <?php echo (in_array($active, ["home", ""])) ? "active" : "" ?>">
-        <a class="nav-link" href="./index.php?content=home">home <span class="sr-only">(current)</span></a>
-      </li>
+      <?php
+        if (isset($_SESSION["id"])) {
+          switch ($_SESSION["userrole"]) {
+            case 'admin':
+              echo '<li class="nav-item '; echo (in_array($active, ["a-home", ""])) ? "active" : ""; echo '">
+                      <a class="nav-link" href="./index.php?content=a-home">home <span class="sr-only">(current)</span></a>
+                    </li>';
+            break;
+            case 'root':
+              echo '<li class="nav-item '; echo (in_array($active, ["r-home", ""])) ? "active" : ""; echo '">
+                      <a class="nav-link" href="./index.php?content=r-home">home <span class="sr-only">(current)</span></a>
+                    </li>';
+            break;
+            case 'customer':
+              echo '<li class="nav-item '; echo (in_array($active, ["c-home", ""])) ? "active" : ""; echo '">
+                      <a class="nav-link" href="./index.php?content=c-home">home <span class="sr-only">(current)</span></a>
+                    </li>';
+            break;
+            case 'moderator':
+              echo '<li class="nav-item '; echo (in_array($active, ["m-home", ""])) ? "active" : ""; echo '">
+                      <a class="nav-link" href="./index.php?content=m-home">home <span class="sr-only">(current)</span></a>
+                    </li>';
+            break;
+            default:
+              echo '<li class="nav-item '; echo (in_array($active, ["home", ""])) ? "active" : ""; echo '">
+                      <a class="nav-link" href="./index.php?content=home">home <span class="sr-only">(current)</span></a>
+                    </li>';
+            break;
+
+          }
+        } else {
+          echo '<li class="nav-item '; echo (in_array($active, ["home", ""])) ? "active" : ""; echo '">
+                  <a class="nav-link" href="./index.php?content=home">home <span class="sr-only">(current)</span></a>
+                </li>';
+        }
+      ?> 
       <li class="nav-item <?php echo ($active == "juices") ? "active" : "" ?>">
         <a class="nav-link" href="./index.php?content=juices">juices</a>
       </li>
@@ -31,6 +64,35 @@ $active = (isset($_GET["content"])) ? $_GET["content"] : "";
     <ul class="navbar-nav ml-auto">
       <?php 
         if (isset($_SESSION["id"])) {
+          switch($_SESSION["userrole"]) {
+            case 'admin':
+              echo '<li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle '; echo (in_array($active, ["a-users", "a-reset_password"])) ? "active" : ""; echo '" href="#" id="navbarDropdownMenuLinkRight" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin workbench
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkRight">
+                        <a class="dropdown-item '; echo ($active == "a-users") ? "active" : ""; echo '" href="./index.php?content=a-users">users</a>
+                        <a class="dropdown-item '; echo ($active == "a-reset_password") ? "active" : ""; echo '" href="./index.php?content=a-reset_password">reset password</a>
+                      </div>
+                    </li>';
+            break;
+            case 'root':
+              echo '<li class="nav-item '; echo ($active == "r-rootpage") ? "active" : ""; echo '">
+                      <a class="nav-link" href="./index.php?content=r-rootpage">rootpage</a>
+                    </li>';
+
+            break;
+            case 'moderator':
+              // Maak hier de hyperlinks voor de gebruikersrol moderator
+
+            break;
+            case 'customer':
+              // Maak hier de hyperlinks voor de gebruikersrol customer
+
+            break;
+            default:
+            break;
+          }
           echo '<li class="nav-item '; echo ($active == "logout") ? "active" : ""; echo '">
                   <a class="nav-link" href="./index.php?content=logout">uitloggen</a>
                 </li>';

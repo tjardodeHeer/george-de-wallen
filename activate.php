@@ -10,7 +10,7 @@
       <form action="./index.php?content=activate_script" method="post">
         <div class="form-group">
           <label for="inputPassword">Kies een nieuw wachtwoord:</label>
-          <input name="password" type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp">
+          <input name="password" type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelp" autofocus>
           <small id="passwordHelp" class="form-text text-muted">Kies een veilig wachtwoord..</small>
         </div>
         <div class="form-group">
