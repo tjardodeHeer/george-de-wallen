@@ -26,4 +26,15 @@
                  "date"          => $date_formated,
                  "time"          => $time_formated);
   }
+
+
+  function is_authorized($userroles) {
+    if (!isset($_SESSION["id"])) {
+      return header("Location: ./index.php?content=message&alert=auth-error");
+    } elseif ( !in_array($_SESSION["userrole"], $userroles)) {
+      return header("Location: ./index.php?content=message&alert=auth-error-user");
+    } else {
+      return true;
+    }
+  }
 ?>
