@@ -1,8 +1,8 @@
 <?php
   define("SERVERNAME", "localhost");
-  define("USERNAME", "am1x_rra");
-  define("PASSWORD", "ntTrD5O8G14H2CkF");
-  define("DBNAME", "am1x-vegetablejuice-c2019");
+  define("USERNAME", "GeorgeUser");
+  define("PASSWORD", "");
+  define("DBNAME", "georgemboutrecht");
 
   $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 ?>

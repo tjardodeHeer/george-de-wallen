@@ -7,7 +7,7 @@
 
     $email = sanitize($_POST["email"]);
 
-    $sql = "SELECT * FROM `register` WHERE `email` = '$email'";
+    $sql = "SELECT * FROM `password` WHERE `email` = '$email'";
 
     $result = mysqli_query($conn, $sql);
 
@@ -19,16 +19,14 @@
       // en geeft dit terug in $array
       $array = mk_password_hash_from_microtime();      
       
-      $sql = "INSERT INTO `register` (`id`,
-                                      `email`,
-                                      `password`,
-                                      `userrole`,
-                                      `activated`)
-              VALUES                 (NULL,
-                                      '$email',
+      $sql = "INSERT INTO `password` (`email`,
+                                      `passwd`,
+                                      `createdAt`,
+                                      `updatedAt`)
+              VALUES                 ('$email',
                                       '{$array["password_hash"]}',
-                                      'customer',
-                                      0)";
+                                      CURRENT_TIMESTAMP,
+                                      CURRENT_TIMESTAMP)";
       // echo $sql;exit();
       if (mysqli_query($conn, $sql)) {
 
@@ -36,8 +34,8 @@
 
         $to = $email;
         $subject = "Activatielink voor uw account van am1x-vegetablejuice.org";
-        // include("./email.php");
-        include("./alt-email.php");
+        include("./email.php");
+        //include("./alt-email.php");
         
         $headers = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=UTF-8\r\n";

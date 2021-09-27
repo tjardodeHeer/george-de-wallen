@@ -1,5 +1,5 @@
 <?php
- if (!(isset($_GET["content"]) && isset($_GET["id"]) && isset($_GET["pwh"]))){
+ if (!(isset($_GET["content"]) && isset($_GET["em"]) && isset($_GET["pwh"]))){
   header("Location: ./index.php?content=message&alert=hacker-alert");
  }
 ?>
@@ -18,7 +18,31 @@
           <input name="passwordCheck" type="password" class="form-control" id="inputPasswordCheck" aria-describedby="passwordHelpCheck">
           <small id="passwordHelpCheck" class="form-text text-muted">Ter controle voert u nogmaals uw wachtwoord in...</small>
         </div>
-        <input type="hidden" name="id" value="<?php echo $_GET["id"]; ?>">
+        <div class = "row">
+          <div class="col-4">
+            <div class="form-group">
+              <label for="inputFirstName">Voornaam:</label>
+              <input name="FirstName" type="text" class="form-control" id="inputFirstName" aria-describedby="firstNameHelp">
+            </div>
+          </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="inputInfix">Tussenvoegsel:</label>
+                <input name="Infix" type="text" class="form-control" id="inputInfix" aria-describedby="InfixHelp">
+              </div>
+            </div>
+          <div class="col-4">
+            <div class="form-group">
+              <label for="inputLastName">Achternaam:</label>
+              <input name="LastName" type="text" class="form-control" id="inputLastName" aria-describedby="lastNameHelp">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPhoneNumber">telefoon nummer:</label>
+          <input name="PhoneNumber" type="tel" class="form-control" id="inputPhoneNumber" aria-describedby="phoneNumberHelp">
+        </div>
+        <input type="hidden" name="em" value="<?php echo $_GET["em"]; ?>">
         <input type="hidden" name="pwh" value="<?php echo $_GET["pwh"]; ?>">
         <button type="submit" class="btn btn-success btn-lg btn-block">Activeer</button>
       </form>

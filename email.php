@@ -18,14 +18,14 @@
       <title>Hello, world!</title>
     </head>
     <body>
-      <h1>'. $d . ' - ' . $t .'</h1>
+      <h1>'. $array["date"] . ' - ' . $array["time"] .'</h1>
       <h2>Beste Gebruiker,</h2>
-      <p>U heeft zich onlangs geregistreerd voor de site www.am1x-vegetablejuice.org</p>
-      <p>Klik <a href="http://www.am1x-vegetablejuice.org/index.php?content=activate&id=' . $id . '&pwh=' . $password_hash . '">hier</a> voor het activeren en wijzigen van het wachtwoord van uw account</p>
+      <p>U heeft zich onlangs geregistreerd voor de site www.backend.com</p>
+      <p>Klik <a href="http://www.backend.com/index.php?content=activate&em=' . $email . '&pwh=' . $array["password_hash"] . '">hier</a> voor het activeren en wijzigen van het wachtwoord van uw account</p>
       <p>Bedankt voor het registreren</p>
       <p>Met vriendelijke groet,</p>
       <p>A. de Ruijter</p>
-      <p>CEO Vegetablejuice INC.</p>
+      <p>CEO Backend.com.</p>
 
   
       <!-- Optional JavaScript -->

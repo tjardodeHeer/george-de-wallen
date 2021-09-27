@@ -1,8 +1,9 @@
+<!-- Navbar --> 
 <?php
 $active = (isset($_GET["content"])) ? $_GET["content"] : "";
 ?>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="./index.php?content=home">Vegetable Juice</a>
+<nav class="navbar navbar-expand-md navbar-light bg-dark"> <img src="/img/Icon-76.png" width="100" height="75">
+  <a class="navbar-brand" href="./index.php?content=home" style="color: white; ">George de wallen</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -13,50 +14,50 @@ $active = (isset($_GET["content"])) ? $_GET["content"] : "";
           switch ($_SESSION["userrole"]) {
             case 'admin':
               echo '<li class="nav-item '; echo (in_array($active, ["a-home", ""])) ? "active" : ""; echo '">
-                      <a class="nav-link" href="./index.php?content=a-home">home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="./index.php?content=a-home"style="color: white; ">home <span class="sr-only">(current)</span></a>
                     </li>';
             break;
             case 'root':
               echo '<li class="nav-item '; echo (in_array($active, ["r-home", ""])) ? "active" : ""; echo '">
-                      <a class="nav-link" href="./index.php?content=r-home">home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="./index.php?content=r-home" style="color: white; ">home <span class="sr-only">(current)</span></a>
                     </li>';
             break;
             case 'customer':
               echo '<li class="nav-item '; echo (in_array($active, ["c-home", ""])) ? "active" : ""; echo '">
-                      <a class="nav-link" href="./index.php?content=c-home">home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="./index.php?content=c-home" style="color: white; ">home <span class="sr-only">(current)</span></a>
                     </li>';
             break;
             case 'moderator':
               echo '<li class="nav-item '; echo (in_array($active, ["m-home", ""])) ? "active" : ""; echo '">
-                      <a class="nav-link" href="./index.php?content=m-home">home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="./index.php?content=m-home" style="color: white; ">home <span class="sr-only">(current)</span></a>
                     </li>';
             break;
             default:
               echo '<li class="nav-item '; echo (in_array($active, ["home", ""])) ? "active" : ""; echo '">
-                      <a class="nav-link" href="./index.php?content=home">home <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="./index.php?content=home" style="color: white; ">home <span class="sr-only">(current)</span></a>
                     </li>';
             break;
 
           }
         } else {
           echo '<li class="nav-item '; echo (in_array($active, ["home", ""])) ? "active" : ""; echo '">
-                  <a class="nav-link" href="./index.php?content=home">home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="./index.php?content=home" style="color: white; ">home <span class="sr-only">(current)</span></a>
                 </li>';
         }
       ?> 
       <li class="nav-item <?php echo ($active == "juices") ? "active" : "" ?>">
-        <a class="nav-link" href="./index.php?content=juices">juices</a>
+        <a class="nav-link" href="./index.php?content=juices" style="color: white; ">Reserveren</a>
       </li>
       <li class="nav-item <?php echo ($active == "smoothies") ? "active" : "" ?>">
-        <a class="nav-link" href="./index.php?content=smoothies">smoothies</a>
+        <a class="nav-link" href="./index.php?content=smoothies"style="color: white; ">Over ons </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle <?php echo (in_array($active, ["sleep", "nutrition", "exercise"])) ? "active" : "" ?>" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          health education
+        <a class="nav-link dropdown-toggle <?php echo (in_array($active, ["sleep", "nutrition", "exercise"])) ? "active" : "" ?>" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white; ">
+          Ons menu
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item <?php echo ($active == "sleep") ? "active" : "" ?>" href="./index.php?content=sleep">sleep</a>
-          <a class="dropdown-item <?php echo ($active == "nutrition") ? "active" : "" ?>" href="./index.php?content=nutrition">nutrition</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+          <a class="dropdown-item <?php echo ($active == "sleep") ? "active" : "" ?>" href="./index.php?content=sleep">Hoofdmenu</a>
+          <a class="dropdown-item <?php echo ($active == "nutrition") ? "active" : "" ?>" href="./index.php?content=nutrition">Salade</a>
           <a class="dropdown-item <?php echo ($active == "exercise") ? "active" : "" ?>" href="./index.php?content=exercise">exercise</a>
         </div>
       </li>
@@ -98,10 +99,10 @@ $active = (isset($_GET["content"])) ? $_GET["content"] : "";
                 </li>';
         } else {
           echo '<li class="nav-item '; echo ($active == "register")? "active" : ""; echo '">
-                  <a class="nav-link" href="./index.php?content=register">registreer</a>
+                  <a class="nav-link" href="./index.php?content=register" style="color: white; ">registreer</a>
                 </li>
                 <li class="nav-item '; echo ($active == "login") ? "active" : ""; echo '">
-                  <a class="nav-link" href="./index.php?content=login">inloggen</a>
+                  <a class="nav-link" href="./index.php?content=login" style="color: white; ">inloggen</a>
                 </li>';
         }
       ?>    
